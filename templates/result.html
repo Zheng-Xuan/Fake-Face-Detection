@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            background-image: url('https://news.sophos.com/wp-content/uploads/2019/02/facial-recognition.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: rgb(255, 255, 255); 
+            font-family: Helvetica, sans-serif; 
+            text-align: left; 
+            padding-top: 30px; 
+            padding-left: 8%; 
+            padding-right: 20%; 
+        }
+
+        h1 {
+            font-size: 4em; 
+        }
+
+        p {
+            margin-top: 20px; 
+            font-size:2em;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<bodybody style="background-image: url('https://news.sophos.com/wp-content/uploads/2019/02/facial-recognition.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; color: rgb(255, 255, 255); font-family: Helvetica, sans-serif; text-align: left; padding-top: 30px; padding-left: 8%; padding-right: 20%;">
+    <h1>Result</h1>
+    <p>Prediction: {{ prediction }}</p>
+    <button class="button" onclick="goBack()">Back to Prediction</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
