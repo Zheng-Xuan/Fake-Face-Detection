@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Deep Fake Faces</title>
+    <style>
+        body {
+            background-image: url('https://news.sophos.com/wp-content/uploads/2019/02/facial-recognition.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: rgb(255, 255, 255); 
+            font-family: Helvetica, sans-serif; 
+            text-align: left; 
+            padding-top: 30px; 
+            padding-left: 8%; 
+            padding-right: 20%; 
+        }
+
+        h1 {
+            font-size: 4em;
+        }
+
+        #selected-image {
+            max-width: 50%; 
+            height: auto; 
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body body style="background-image: url('https://news.sophos.com/wp-content/uploads/2019/02/facial-recognition.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; color: rgb(255, 254, 254); font-family: Helvetica, sans-serif; text-align: left; padding-top: 30px; padding-left: 8%; padding-right: 20%;">
+    <h1>Real or Fake?</h1>
+    <!-- Form to upload image -->
+    <form id="upload-form" method="POST" action="/predict" enctype="multipart/form-data">
+        <input type="file" id="file-input" name="file" accept="image/*">
+        <button type="submit">Predict</button>
+    </form>
+    <!-- Image preview section -->
+    <img id="selected-image" src="#" alt="Selected Image">
+    
+    <!-- JavaScript to handle image selection and preview -->
+    <script>
+        // Function to handle image selection and preview
+        function previewImage() {
+            var fileInput = document.getElementById('file-input');
+            var imagePreview = document.getElementById('selected-image');
+
+            // Check if a file is selected
+            if (fileInput.files && fileInput.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    // Set the src attribute of the image to the data URL
+                    imagePreview.src = e.target.result;
+                }
+
+                // Read the selected file as a data URL
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+        }
+
+        // Attach an event listener to the file input element
+        document.getElementById('file-input').addEventListener('change', previewImage);
+    </script>
+</body>
+</html>
