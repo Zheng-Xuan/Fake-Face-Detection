@@ -2,13 +2,14 @@ import cv2
 import numpy as np
 import torch
 from flask import Flask, render_template, request
-from model.facenetmodel import FacenetFineTuned
 from torchvision import transforms
 from torchvision.transforms.functional import InterpolationMode
 
+from model.facenetmodel import FacenetFineTuned
+
 app = Flask(__name__)
 
-model = FacenetFineTuned()
+model = FacenetFineTuned(pretrained="casia-webface")
 model_path = "model/facenetfinetuned.pth"
 loaded_state_dict = torch.load(model_path, map_location=torch.device("cpu"))
 
