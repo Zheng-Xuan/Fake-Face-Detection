@@ -1,14 +1,14 @@
-# Deep Fake Detection
+# Fake Face Detection
 
 ## Problem statement
 
-Deep fakes refer to the use of Artificial Intelligence to generate convincing images, videos or audio clips. This offers a variety of opportunities such as content creation for entertainment and marketing. Other benefits include immersive storytelling by recreating timelines with AI-generated historical figures.
+Using AI to create fakes are becoming increasingly prevalent, this includes generating convincing images, videos or audio clips. This offers a variety of opportunities such as content creation for entertainment and marketing. Other benefits include immersive storytelling by recreating timelines with AI-generated historical figures.
 
-However, this also poses a new form of danger as deep fakes can be used to spread misinformation through false advertisements by mimicking brand ambassadors. Worse, politicians may be impersonated to sway public opinions, sowing discord, manipulating the public and destroying their reputations.
+However, this also poses a new form of danger as these fakes can be used to spread misinformation through false advertisements by mimicking brand ambassadors. Worse, politicians may be impersonated to sway public opinions, sowing discord, manipulating the public and destroying their reputations.
 
 ## Project Description
 
-The aim of the project is to implement an AI solution to detect the presence of deep fake images. The end product allows a user to upload an image and the model classifies if the uploaded image is real or fake.
+The aim of the project is to implement an AI solution to detect the presence of fake faces that have been tampered with. The end product allows a user to upload an image and the model classifies if the uploaded image is real or fake.
 
 ## Dataset
 
